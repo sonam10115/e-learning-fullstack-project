@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 // Load environment variables FIRST
 dotenv.config();
 
+const _dirname = path.resolve();
+
 const connectDB = require('./utils/db.js');
 const { server, app, io } = require('./lib/socket.js');
 const { ENV } = require('./lib/env.js');
@@ -68,6 +70,12 @@ if (ENV.NODE_ENV === "production") {
         res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
     });
 }
+
+app.use(express.static(path.join(_dirname, "frontend", "dist")));
+
+app.use((_, res) => {
+    res.sendFile(path.join(_dirname, "frontend", "dist", "index.html"));
+});
 
 
 // ============ SERVER START ============
