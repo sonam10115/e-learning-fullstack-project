@@ -22,7 +22,7 @@ import AdminCourses from "./pages/admin/AdminCourses";
 import AdminOrders from "./pages/admin/AdminOrders";
 import AdminAnalytics from "./pages/admin/AdminAnalytics";
 import AdminLayout from "./components/admin-view/layout";
-import ChatPage from "./pages/chat/chatPage";
+import ChatPage from "./pages/chat/ChatPage";
 
 function App() {
   const { auth } = useContext(AuthContext);
