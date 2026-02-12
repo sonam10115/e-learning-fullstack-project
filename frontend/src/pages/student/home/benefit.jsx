@@ -1,7 +1,7 @@
 import React from "react";
 import { benefitItems } from "../../constant/data.js";
 import { RiArrowRightUpLine } from "@remixicon/react";
-import Title from "./Title.jsx";
+import Title from "./title.jsx";
 
 // import motion
 
